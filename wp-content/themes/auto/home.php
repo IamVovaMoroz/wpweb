@@ -1,7 +1,13 @@
+<!-- Шаблон записи из любого файла из шпаргалки -->
+<?php
+/*
+Template Name: home
+
+*/
+?>
+
 <?php get_header(); ?>
 
-<!-- переносим в  -->
-<!-- 
   <section class="services">
     <div class="container">
       <h2 class="title">НАШИ УСЛУГИ</h2>
@@ -203,6 +209,6 @@
         </form>
       </div>
     </div>
-  </section> -->
+  </section>
 
-  <?php get_footer(); ?> 
+  <?php get_footer(); ?>

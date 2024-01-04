@@ -22,10 +22,13 @@ add_action( 'wp_enqueue_scripts', function() {
    
    // 4) подключаем скрипты с footer
 
-   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+//    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+// отключение общего jquery и подключение нужной версии
+   wp_deregister_script( 'jquery' );
+	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js');
+	wp_enqueue_script( 'jquery' );
 
-
-   
+//    все что зависит от jquery ниже размещаем
    wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.min.js', array('jquery'), 'null', true );
    wp_enqueue_script( 'wow', get_template_directory_uri() . '/assets/js/wow.min.js', array('jquery'), 'null', true );
     // подключает скрипты/ array('jquery') - зависит от jquery,  'null' - версия jquery, / true - если подключаем скрипты в footer внизу
