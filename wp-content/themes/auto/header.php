@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<!-- <html lang="ru"> -->
+<html <?php language_attributes(); ?>>
 
 <head>
-  <meta charset="UTF-8">
+  <!-- <meta charset="UTF-8">  Заменили кодировку ниже-->
+  <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
@@ -17,6 +19,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="css/style.css"> -->
 
+
+
 </head>
 
 <body>
@@ -25,7 +29,7 @@
     <div class="container">
       <div class="header__top">
         <a class="logo" href="#">
-          <img class="logo__img" src="images/logo.svg" alt="logo">
+          <img class="logo__img" src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="logo">
         </a>
         <a class="phone" href="tel:+380505556677">+38 (067) 119 05 60</a>
       </div>
@@ -43,26 +47,26 @@
         <div class="social header__social">
           <a class="social__link" href="#">
             <svg class="test" width="26" height="26">
-              <use xlink:href="images/icon/sprite.svg#instagram"></use>
+              <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/icon/sprite.svg#instagram"></use>
             </svg>
           </a>
           <a class="social__link" href="#">
             <svg width="25" height="19">
-              <use xlink:href="images/icon/sprite.svg#telegram"></use>
+              <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/icon/sprite.svg#telegram"></use>
             </svg>
           </a>
           <a class="social__link" href="#">
             <svg width="26" height="26">
-              <use xlink:href="images/icon/sprite.svg#whatsapp"></use>
+              <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/icon/sprite.svg#whatsapp"></use>
             </svg>
           </a>
           <a class="social__link" href="#">
             <svg width="14" height="25">
-              <use xlink:href="images/icon/sprite.svg#facebook"></use>
+              <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/icon/sprite.svg#facebook"></use>
             </svg>
           </a>
         </div>
-        <img data-wow-delay="2s" class="header__images wow animate__fadeInUpBig" src="images/ford-mustang.png"
+        <img data-wow-delay="2s" class="header__images wow animate__fadeInUpBig" src="<?php bloginfo('template_url'); ?>/assets/images/ford-mustang.png"
           alt="ford mustang">
       </div>
     </div>

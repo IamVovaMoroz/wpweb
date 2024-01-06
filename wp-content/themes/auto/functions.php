@@ -35,7 +35,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), 'null', true );
 }); 
 
-// 
+
 // посты поддерживат картинки
 add_theme_support('post-thumbnails');
 // менять title wp

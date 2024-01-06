@@ -84,7 +84,7 @@ Template Name: home
   <section class="benefits">
     <div class="container">
       <div class="benefits__inner">
-        <img data-wow-delay="2s" class="benefits__images wow animate__fadeInUp" src="images/car.png" alt="car">
+        <img data-wow-delay="2s" class="benefits__images wow animate__fadeInUp" src="<?php bloginfo('template_url'); ?>/assets/images/car.png" alt="car">
         <div class="benefits__content">
           <h2 class="title benefits__title">ПОЧЕМУ МЫ?</h2>
           <ul class="benefits__list">
@@ -125,42 +125,42 @@ Template Name: home
 
         <div class="carousel__item">
           <div class="carousel__item-box">
-            <img class="carousel__item-img" src="images/carousel/1.jpg" alt="">
+            <img class="carousel__item-img" src="<?php bloginfo('template_url'); ?>/assets/images/carousel/1.jpg" alt="">
             <h4 class="carousel__item-title">INFINITI QX50 2016 г.</h4>
             <p class="carousel__item-text">Экономия 4500 $</p>
           </div>
         </div>
         <div class="carousel__item">
           <div class="carousel__item-box">
-            <img class="carousel__item-img" src="images/carousel/2.jpg" alt="">
+            <img class="carousel__item-img" src="<?php bloginfo('template_url'); ?>/assets/images/carousel/2.jpg" alt="">
             <h4 class="carousel__item-title">TESLA MODEL 3 2018 г.</h4>
             <p class="carousel__item-text">Экономия 5500 $</p>
           </div>
         </div>
         <div class="carousel__item">
           <div class="carousel__item-box">
-            <img class="carousel__item-img" src="images/carousel/3.jpg" alt="">
+            <img class="carousel__item-img" src="<?php bloginfo('template_url'); ?>/assets/images/carousel/3.jpg" alt="">
             <h4 class="carousel__item-title">TESLA MODEL 3 2018 г.</h4>
             <p class="carousel__item-text">Экономия 5500 $</p>
           </div>
         </div>
         <div class="carousel__item">
           <div class="carousel__item-box">
-            <img class="carousel__item-img" src="images/carousel/1.jpg" alt="">
+            <img class="carousel__item-img" src="<?php bloginfo('template_url'); ?>/assets/images/carousel/1.jpg" alt="">
             <h4 class="carousel__item-title">INFINITI QX50 2016 г.</h4>
             <p class="carousel__item-text">Экономия 4500 $</p>
           </div>
         </div>
         <div class="carousel__item">
           <div class="carousel__item-box">
-            <img class="carousel__item-img" src="images/carousel/2.jpg" alt="">
+            <img class="carousel__item-img" src="<?php bloginfo('template_url'); ?>/assets/images/carousel/2.jpg" alt="">
             <h4 class="carousel__item-title">TESLA MODEL 3 2018 г.</h4>
             <p class="carousel__item-text">Экономия 5500 $</p>
           </div>
         </div>
         <div class="carousel__item">
           <div class="carousel__item-box">
-            <img class="carousel__item-img" src="images/carousel/3.jpg" alt="">
+            <img class="carousel__item-img" src="<?php bloginfo('template_url'); ?>/assets/images/carousel/3.jpg" alt="">
             <h4 class="carousel__item-title">TESLA MODEL 3 2018 г.</h4>
             <p class="carousel__item-text">Экономия 5500 $</p>
           </div>
