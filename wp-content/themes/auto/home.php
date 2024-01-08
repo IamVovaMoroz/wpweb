@@ -123,48 +123,96 @@ Template Name: home
       </h2>
       <div class="carousel__inner">
 
+      <!-- добавляем функцию добавления новых обьявлений в каруселе -->
+
+      <?php
+global $post;
+
+$myposts = get_posts([
+	'numberposts' => -1,  // 'numberposts' => -1, выводим все что есть
+	// 'offset'      => 1,
+	// 'category'    => 1
+]);
+
+if( $myposts ){
+	foreach( $myposts as $post ){
+		setup_postdata( $post );
+		?>
+		<!-- Вывод постов, функции цикла: the_title() и т.д. -->
         <div class="carousel__item">
+          <div class="carousel__item-box">
+            
+          
+          <!-- php the_post_thumbnail(); ?> вывод картинок, array(380, 250) - разрешение картинок -->
+     
+
+  <?php the_post_thumbnail(
+    array(380, 250), 
+    array('class' => "carousel__item-img")
+); ?> 
+
+
+
+            <!-- <img class="carousel__item-img" src="<?php bloginfo('template_url'); ?>/assets/images/carousel/1.jpg" alt=""> -->
+            <!-- php the_title(); ?> и php the_content(); ?> выводит заголовок и контент с админки -->
+            <h4 class="carousel__item-title"><?php the_title(); ?></h4>  
+            <p class="carousel__item-text"><?php the_content(); ?></p>
+          </div>
+        </div>
+
+
+		<?php
+	}
+} 
+
+wp_reset_postdata(); // Сбрасываем $post
+?>
+
+
+        <!-- <div class="carousel__item">
           <div class="carousel__item-box">
             <img class="carousel__item-img" src="<?php bloginfo('template_url'); ?>/assets/images/carousel/1.jpg" alt="">
             <h4 class="carousel__item-title">INFINITI QX50 2016 г.</h4>
             <p class="carousel__item-text">Экономия 4500 $</p>
           </div>
-        </div>
-        <div class="carousel__item">
+        </div> -->
+
+
+        <!-- <div class="carousel__item">
           <div class="carousel__item-box">
             <img class="carousel__item-img" src="<?php bloginfo('template_url'); ?>/assets/images/carousel/2.jpg" alt="">
             <h4 class="carousel__item-title">TESLA MODEL 3 2018 г.</h4>
             <p class="carousel__item-text">Экономия 5500 $</p>
           </div>
-        </div>
-        <div class="carousel__item">
+        </div> -->
+        <!-- <div class="carousel__item">
           <div class="carousel__item-box">
             <img class="carousel__item-img" src="<?php bloginfo('template_url'); ?>/assets/images/carousel/3.jpg" alt="">
-            <h4 class="carousel__item-title">TESLA MODEL 3 2018 г.</h4>
-            <p class="carousel__item-text">Экономия 5500 $</p>
+            <h4 class="carousel__item-title">LEXUS MODEL 3 2013 г.</h4>
+            <p class="carousel__item-text">Экономия 6500 $</p>
           </div>
-        </div>
-        <div class="carousel__item">
+        </div> -->
+        <!-- <div class="carousel__item">
           <div class="carousel__item-box">
             <img class="carousel__item-img" src="<?php bloginfo('template_url'); ?>/assets/images/carousel/1.jpg" alt="">
             <h4 class="carousel__item-title">INFINITI QX50 2016 г.</h4>
             <p class="carousel__item-text">Экономия 4500 $</p>
           </div>
-        </div>
-        <div class="carousel__item">
+        </div> -->
+        <!-- <div class="carousel__item">
           <div class="carousel__item-box">
             <img class="carousel__item-img" src="<?php bloginfo('template_url'); ?>/assets/images/carousel/2.jpg" alt="">
             <h4 class="carousel__item-title">TESLA MODEL 3 2018 г.</h4>
             <p class="carousel__item-text">Экономия 5500 $</p>
           </div>
-        </div>
-        <div class="carousel__item">
+        </div> -->
+        <!-- <div class="carousel__item">
           <div class="carousel__item-box">
             <img class="carousel__item-img" src="<?php bloginfo('template_url'); ?>/assets/images/carousel/3.jpg" alt="">
             <h4 class="carousel__item-title">TESLA MODEL 3 2018 г.</h4>
             <p class="carousel__item-text">Экономия 5500 $</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
