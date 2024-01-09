@@ -251,9 +251,10 @@ wp_reset_postdata(); // Сбрасываем $post
         </div>
         <form class="contacts__form">
           <h2 class="title contacts__title">Оставить заявку</h2>
-          <input class="contacts__input" type="text" placeholder="Как Вас зовут?">
+          <?php echo do_shortcode('[contact-form-7 id="c4f3db7" title="Contact form"]') ?>
+          <!-- <input class="contacts__input" type="text" placeholder="Как Вас зовут?">
           <input class="contacts__input" type="tel" placeholder="Ваш номер телефона">
-          <button class="contacts__btn button" type="submit">Отправить заявку</button>
+          <button class="contacts__btn button" type="submit">Отправить заявку</button> -->
         </form>
       </div>
     </div>
